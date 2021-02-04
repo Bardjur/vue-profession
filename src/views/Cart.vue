@@ -2,8 +2,8 @@
   <div class="card">
     <h1>Корзина</h1>
 
-    <h3 class="text-center">В корзине пока ничего нет</h3>
-    <table class="table">
+    <h3 class="text-center" v-if="!cartProd.length">В корзине пока ничего нет</h3>
+    <table class="table" v-else>
       <thead>
       <tr>
         <th>Наименование</th>
