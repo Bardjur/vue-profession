@@ -17,10 +17,10 @@
     </table>
     <hr>
     <p class="text-right"><strong>Всего: {{currency(sum)}} </strong></p>
-    <p class="text-right" v-if="user.id">
+    <p class="text-right" v-if="user.id && cartProducts.length">
       <button class="btn" @click="buy">Оплатить</button>
     </p>
-    <form @submit.prevent v-else>
+    <form @submit.prevent v-if="cartProducts.length && !user.id">
     <h3>Авторизуйтесь или зарегистрируйтесь </h3>
     <div class="form-control">
       <input type="text" name="email" placeholder="Введите имя" v-model="email" @blur="eBlur">
