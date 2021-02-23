@@ -2,7 +2,7 @@
   <button class="btn danger"
     @click="subtract(product.id)">-</button>
 
-  <strong>{{cartData[product.id]}} шт. </strong>
+  <strong> {{cartData[product.id]}} шт. </strong>
 
   <button class="btn primary"
     @click="add(product.id)"

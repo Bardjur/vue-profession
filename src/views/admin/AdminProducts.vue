@@ -77,7 +77,3 @@ export default {
   components: { AppPage, AppLoader, AppModal, AdminProductsTable, AdminFormProduct, AppPagination }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

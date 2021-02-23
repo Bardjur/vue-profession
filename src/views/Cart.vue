@@ -4,7 +4,7 @@
     <table class="table" v-else>
       <thead>
       <tr>
-        <th>Наименование</th>
+        <th>Наимено&shy;вание</th>
         <th>Количество</th>
         <th>Цена (шт)</th>
       </tr>
@@ -71,7 +71,7 @@ export default {
 
     const sum = computed(() => {
       return cartProducts.value.reduce((previousValue, currentItem) => {
-        return previousValue + currentItem.count * currentItem.price
+        return cartData.value[currentItem.id] * currentItem.price + previousValue
       }, 0)
     })
 

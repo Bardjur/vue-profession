@@ -9,8 +9,8 @@
         <router-link to="/cart">Корзина</router-link>
         <span v-if="count">{{count}}</span>
       </li>
-      <li>
-        <router-link to="/person">{{ user.email }}</router-link>
+      <li v-if="user.email">
+        <router-link to="/person" >{{ user.email }}</router-link>
       </li>
       <li v-if="user.id">
         <a href="#" @click.prevent="logout">Выйти</a>

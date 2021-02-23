@@ -620,3 +620,37 @@ h3 {
     width: 750px;
     padding: 1rem;
 }
+
+@media screen and (max-width: 450px){
+    .navbar{
+        padding: 0 5px;
+    }
+    .navbar-menu { flex-wrap: wrap;}
+    nav h3 { font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+    .navbar-menu li {
+        margin-right: 1rem;
+        align-items: center;
+    }
+    .table th, .table td {
+        padding: 5px;
+    }
+    .table button, .product-controls button {padding: 5px 3px; margin:0 2px}
+    .card {padding: .5rem;}
+    .product-card {
+        max-width: 220px;
+        height: auto;
+        padding-bottom: 5px;
+    }
+    .products-table {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 750px;
+        padding: 5px;
+        overflow: hidden;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
