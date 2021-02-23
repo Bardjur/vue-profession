@@ -9,17 +9,17 @@ export function useCartProducts (cartData) {
     await store.dispatch('product/loadProducts')
   })
 
-  const cartProd = computed(() => store.getters['product/getProducts'].filter(prod => Object.keys(cartModel).indexOf(prod.id) >= 0).map((item) => {
-    item.count = cartModel[item.id]
-    return item
-  }))
+  const cartProd = computed(() => store.getters['product/getProducts']
+    .filter(prod => Object.keys(cartModel).indexOf(prod.id) >= 0)
+    .map((item) => {
+      item.count = cartModel[item.id]
+      return item
+    }))
 
   const sum = computed(() => {
-    let k = 0
-    cartProd.value.forEach(item => {
-      k += item.count * item.price
-    })
-    return k
+    return cartProd.value.reduce((previousValue, currentItem) => {
+      return previousValue + currentItem.count * currentItem.price
+    }, 0)
   })
 
   function add (id) {

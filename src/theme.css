@@ -180,6 +180,10 @@ h3 {
     border-color: #e53935;
 }
 
+.form-control.invalid select {
+    border-color: #e53935;
+}
+
 .form-checkbox {
     margin-bottom: 1rem;
 }

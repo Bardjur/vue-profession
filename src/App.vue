@@ -7,6 +7,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import MainLayout from './layout/MainLayout.vue'
 import AuthLayout from './layout/AuthLayout.vue'
+import AdminLayout from './layout/AdminLayout.vue'
 
 export default {
 
@@ -15,6 +16,6 @@ export default {
     const layout = computed(() => route.meta.layout)
     return { layout }
   },
-  components: { MainLayout, AuthLayout }
+  components: { MainLayout, AuthLayout, AdminLayout }
 }
 </script>
