@@ -14,9 +14,9 @@ export default {
   setup () {
     const store = useStore()
     const TITLE_MAP = {
-      primary: 'Успешно!',
-      danger: 'Ошибка!',
-      warning: 'Внимание!'
+      primary: 'Успішно!',
+      danger: 'Помилка!',
+      warning: 'Увага!'
     }
 
     const message = computed(() => store.state.message)

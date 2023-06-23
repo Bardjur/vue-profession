@@ -6,7 +6,7 @@
     <h4 class="product-title">{{product.title}}</h4>
     <div class="text-center">
       <button class="btn" v-if="product.count && !cartData[product.id]" @click="add(product.id)">{{product.count}}</button>
-      <p v-if="!product.count">Нет в наличии</p>
+      <p v-if="!product.count">Нема в наявності</p>
      <div class="product-controls" v-if="cartData[product.id]">
          <app-control-buttons :product="product" />
       </div>

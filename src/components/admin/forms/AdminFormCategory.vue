@@ -2,7 +2,7 @@
   <div>
     <form class="" @submit.prevent="onSubmit">
       <div :class="['form-control', { invalid: errors['title'] }]">
-        <label for="title">Название</label>
+        <label for="title">Назва</label>
         <input type="text" id="title" v-model="title" @blur="titleBlur">
         <small v-if="errors['title']">{{ errors['title'] }}</small>
       </div>
@@ -11,7 +11,7 @@
         <input type="text" id="type" v-model="type" @blur="typeBlur">
         <small v-if="errors['type']">{{ errors['type'] }}</small>
       </div>
-      <button class="btn primary" :disabled="isSubmitting">Создать</button>
+      <button class="btn primary" :disabled="isSubmitting">Створити</button>
     </form>
   </div>
 </template>

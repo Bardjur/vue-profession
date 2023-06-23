@@ -1,22 +1,22 @@
 <template>
   <form class="" @submit.prevent="onSubmit">
     <div :class="['form-control', { invalid: errors['title'] }]">
-      <label for="title">Название</label>
+      <label for="title">Назва</label>
       <input type="text" id="title" v-model="title" @blur="tBlur">
       <small v-if="errors['title']">{{ errors['title'] }}</small>
     </div>
     <div :class="['form-control', { invalid: errors['img'] }]">
-      <label for="img">Изображение</label>
+      <label for="img">Картинка</label>
       <input type="text" id="img" v-model="img" @blur="imgBlur">
       <small v-if="errors['img']">{{ errors['img'] }}</small>
     </div>
     <div :class="['form-control', { invalid: errors['price'] }]">
-      <label for="price">Цена</label>
+      <label for="price">Ціна</label>
       <input type="number" id="price" v-model="price" @blur="pBlur">
       <small v-if="errors['price']">{{ errors['price'] }}</small>
     </div>
     <div :class="['form-control', { invalid: errors['category'] }]">
-      <label for="category">Категория</label>
+      <label for="category">Категорія</label>
       <select id="category" v-model="category">
         <option
           v-for="item in categories"
@@ -27,18 +27,18 @@
       <small v-if="errors['category']">{{ errors['category'] }}</small>
     </div>
     <div :class="['form-control', { invalid: errors['count'] }]">
-      <label for="count">Количество</label>
+      <label for="count">Кількість</label>
       <input type="number" id="count" v-model="count" @blur="cBlur">
       <small v-if="errors['count']">{{ errors['count'] }}</small>
     </div>
 
     <button class="btn primary" :disabled="isSubmitting" v-if="!productData || hasChange">{{productData ? 'Сохранить' : 'Создать'}}</button>
-    <button class="btn danger" v-if="productData" @click.prevent="confirm = true">Удалить</button>
+    <button class="btn danger" v-if="productData" @click.prevent="confirm = true">Видалити</button>
   </form>
 
     <teleport to="body">
     <app-confirm
-      title="Дейстивтельно удалить?"
+      title="Бажаєте видалити?"
       v-if="confirm"
       @reject="confirm = false"
       @confirm="del"
@@ -47,7 +47,7 @@
   </teleport>
   <teleport to="body">
     <app-confirm
-      title="Есть несохраненные изменения. Покинуть страницу?"
+      title="Є не збережені зміни. Залишити сторінку?"
       v-if="leave"
       @reject="leave = false"
       @confirm="navigate"

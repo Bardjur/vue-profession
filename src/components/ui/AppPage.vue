@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrumbs" v-if="back">
-    <router-link to="/" class="text-white">Вернуться к товарам</router-link>
+    <router-link to="/" class="text-white">Повернутись до товарів</router-link>
   </div>
   <div :class="['card', {center}]">
     <h1 v-if="title" class="card-title">

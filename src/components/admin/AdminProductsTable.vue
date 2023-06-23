@@ -3,12 +3,12 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Название</th>
-        <th>Изображение</th>
-        <th>Цена</th>
-        <th>Категория</th>
-        <th>Количество</th>
-        <th>Действие</th>
+        <th>Назва</th>
+        <th>Картинка</th>
+        <th>Ціна</th>
+        <th>Категорія</th>
+        <th>Кількість</th>
+        <th>Дія</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +21,7 @@
         <td>{{product.count}}</td>
         <td>
           <router-link v-slot="{navigate}" custom :to="{name: 'AdminProduct', params: {id: product.id}}">
-            <button class="btn" @click="navigate">Открыть</button>
+            <button class="btn" @click="navigate">Відкрити</button>
           </router-link>
         </td>
       </tr>

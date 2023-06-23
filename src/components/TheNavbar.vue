@@ -13,7 +13,7 @@
         <router-link to="/person" >{{ user.email }}</router-link>
       </li>
       <li v-if="user.id">
-        <a href="#" @click.prevent="logout">Выйти</a>
+        <a href="#" @click.prevent="logout">Вийти</a>
       </li>
     </ul>
   </nav>

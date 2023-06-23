@@ -3,9 +3,9 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Название</th>
+        <th>Назва</th>
         <th>Тип</th>
-        <th>Действие</th>
+        <th>Дія</th>
       </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
         <td>{{category.title}}</td>
         <td>{{category.type}}</td>
         <td>
-          <button class="btn danger" @click="data={id: category.id, type: category.type}, confirm = true">Удалить</button>
+          <button class="btn danger" @click="data={id: category.id, type: category.type}, confirm = true">Видалити</button>
         </td>
       </tr>
     </tbody>
@@ -22,7 +22,7 @@
 
   <teleport to="body">
     <app-confirm
-      title="Дейстивтельно удалить?"
+      title="Ви бажаєте видалити?"
       v-if="confirm"
       @reject="confirm = false"
       @confirm="del"
