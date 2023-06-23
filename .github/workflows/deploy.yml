@@ -14,7 +14,7 @@ jobs:
       - name: Install, lint, build 🔧
         run: |
           npm install
-          echo "export NODE_OPTIONS=--openssl-legacy-provider"
+          echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
           npm run build
 
       - name: Deploy 🚀
