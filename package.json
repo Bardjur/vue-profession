@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dbase": "json-server --watch db.json",
-    "start": "concurrently \"npm run serve\" \"npm run dbase\""
+    "start": "vue-cli-service serve"
   },
   "dependencies": {
     "axios": "^0.21.1",
