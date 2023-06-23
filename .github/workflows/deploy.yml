@@ -11,9 +11,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
         
-      - name: Override NODE options for the most recent version
-        if: matrix.node-version == '18'
-        run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
+      - name: Setup NODE
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - run: echo 'NODE_OPTIONS="--openssl-legacy-provider"' >> $GITHUB_ENV
 
       - name: Install, lint, build 🔧
         run: |
