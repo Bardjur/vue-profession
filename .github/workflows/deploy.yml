@@ -18,6 +18,9 @@ jobs:
         run: |
           npm install
           npm run build
+          
+      - name: Setup NODE
+      - run: echo 'NODE_OPTIONS=""' >> $GITHUB_ENV
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
