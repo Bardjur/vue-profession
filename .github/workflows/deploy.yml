@@ -20,6 +20,7 @@ jobs:
           npm run build
           
       - name: Setup NODE
+        uses: actions/setup-node@v2
       - run: echo 'NODE_OPTIONS=""' >> $GITHUB_ENV
 
       - name: Deploy 🚀
